@@ -1,5 +1,3 @@
-import time
-
 from behave import step
 from pages.login_page.login_page import LoginPage
 

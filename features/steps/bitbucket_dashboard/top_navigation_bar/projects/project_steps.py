@@ -1,3 +1,5 @@
+import time
+
 from behave import step
 from pages.bitbucket_dashboard.top_navigation_bar.projects.projects_page import ProjectsPage
 
@@ -14,6 +16,7 @@ def go_to_specific_project(context):
 
 @step('I press on Create repository button')
 def press_create_repository_button(context):
+    time.sleep(2)
     ProjectsPage(context).press_on_create_repository_button()
 
 
@@ -34,9 +37,7 @@ def ignore_readme_file(context):
 
 @step('I press on Create repository button on the form')
 def press_create_repository_on_the_form(context):
-    ProjectsPage(context).press_on_create_repository_button_by_css_selector()
-
-
+    ProjectsPage(context).press_on_create_repository_button_in_form()
 
 
 

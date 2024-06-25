@@ -17,4 +17,6 @@ def enter_password(context):
     LoginPage(context).enter_password()
 
 
-
+@step('I should be redirected to the login page')
+def is_login_page_visible(context):
+    LoginPage(context).is_login_page_visible()

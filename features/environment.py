@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 def set_up_driver(context):
     context.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     context.wait = WebDriverWait(context.driver, 10)
+    context.driver.maximize_window()
 
 
 def before_all(context):

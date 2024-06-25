@@ -1,3 +1,5 @@
+import time
+
 from .locators import *
 from interactions.helper.helper import Helper
 
@@ -14,7 +16,7 @@ class ProjectsPage:
         Helper(self.context).click_on_second_element_by_text(MINDIO_PROJECT)
 
     def press_on_create_repository_button(self):
-        Helper(self.context).click_on_element_by_text(CREATE_REPOSITORY_BUTTON)
+        Helper(self.context).click_on_element_by_xpath(CREATE_REPOSITORY_BUTTON)
 
     def is_create_repository_form_visible(self):
         Helper(self.context).is_element_visible_by_id(NEW_REPOSITORY_FORM)
@@ -25,6 +27,6 @@ class ProjectsPage:
     def readme_dropdown(self, value):
         Helper(self.context).select_from_dropdown_menu_by_id(README_SELECT, value)
 
-    def press_on_create_repository_button_by_css_selector(self):
-        Helper(self.context).click_on_button_by_xpath(CREATE_REPOSITORY_BUTTON)
+    def press_on_create_repository_button_in_form(self):
+        Helper(self.context).click_on_element_by_xpath(CREATE_REPOSITORY_BUTTON_IN_FORM)
 

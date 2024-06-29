@@ -51,12 +51,12 @@ def before_step(context, step):
 def after_step(context, step):
     """
     """
-    pass
+    ...
 
 
 def after_all(context):
     """
     """
-    pass
+    ...
 
 

@@ -1,4 +1,3 @@
-import time
 from behave import step
 from pages.bitbucket_dashboard.top_navigation_bar.repositories.repositories_page import RepositoriesPage
 
@@ -35,7 +34,6 @@ def press_create_button(context):
 
 @step('I need to verify that branch was created {branch_name}')
 def is_new_branch_created(context, branch_name):
-    time.sleep(2)
     RepositoriesPage(context).press_the_source_button()
     RepositoriesPage(context).press_on_branches_dropdown_menu()
     RepositoriesPage(context).choose_specific_branch_in_dropdown_menu(branch_name)
@@ -104,6 +102,11 @@ def press_merge_button(context):
     RepositoriesPage(context).press_merge_button()
 
 
+@step('I verify that the Merge pull request dialog window is visible')
+def verify_merge_pull_request_dialog_visible(context):
+    RepositoriesPage(context).verify_merge_pull_request_dialog_visible()
+
+
 @step('I press Merge button in dialog window')
 def press_merge_button_merge_dialog_window(context):
     RepositoriesPage(context).press_merge_button_merge_dialog_window()
@@ -123,4 +126,8 @@ def press_repository_settings_button(context):
 def delete_repository(context):
     RepositoriesPage(context).delete_repository()
 
+
+@step('I refresh the page')
+def refresh_page(context):
+    RepositoriesPage(context).refresh_page()
 

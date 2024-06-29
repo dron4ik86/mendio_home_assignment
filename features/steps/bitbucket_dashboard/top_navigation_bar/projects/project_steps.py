@@ -21,8 +21,8 @@ def press_create_repository_button(context):
 
 
 @step('I will be redirected to the Create a new repository form')
-def is_create_repository_form_visible(context):
-    ProjectsPage(context).is_create_repository_form_visible()
+def verify_repository_form_is_visible(context):
+    ProjectsPage(context).verify_repository_form_is_visible()
 
 
 @step('I enter repository name {random_name}')

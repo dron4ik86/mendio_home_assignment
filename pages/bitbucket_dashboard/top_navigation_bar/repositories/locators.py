@@ -17,9 +17,9 @@ CREATE_PULL_REQUEST_BUTTON = "//span[text()='Create pull request']"
 APPROVE_BUTTON = "//span[text()='Approve']"
 UNAPPROVE_BUTTON = "//span[text()='Unapprove']"
 MERGE_BUTTON = "//span[text()='Merge']"
+MERGE_PULL_REQUEST_DIALOG_TITLE = 'Merge pull request'
 MERGE_BUTTON_MERGE_DIALOG_WINDOW = "span[data-qa='merge-dialog-merge-button']"
 REPOSITORY_SETTINGS = 'Repository settings'
 MANAGE_REPOSITORY_DROPDOWN_MENU = "//span[text()='Manage repository']"
 DELETE_REPOSITORY = "//span[text()='Delete repository']"
 DELETE_BUTTON = "//span[text()='Delete']"
-

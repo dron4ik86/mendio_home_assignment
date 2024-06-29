@@ -21,7 +21,7 @@ class RepositoriesPage:
         Helper(self.context).click_on_element_by_id(CREATE_BRANCH_BUTTON)
 
     def is_create_branch_form_visible(self):
-        Helper(self.context).is_element_visible_by_xpath(CREATE_BRANCH_FORM_TITLE)
+        Helper(self.context).is_element_visible_by_text_xpath(CREATE_BRANCH_FORM_TITLE)
 
     def enter_branch_name(self, branch_name):
         Helper(self.context).send_keys_by_name(BRANCH_NAME_FIELD, branch_name)
@@ -61,7 +61,7 @@ class RepositoriesPage:
         Helper(self.context).click_on_element_by_css(COMMIT_BUTTON_COMMIT_CHANGES_DIALOG)
 
     def is_file_visible(self, file_name):
-        Helper(self.context).is_element_visible_by_xpath(file_name)
+        Helper(self.context).is_element_visible_by_text_xpath(file_name)
 
     def press_create_button_branch_table(self):
         Helper(self.context).click_on_second_element_by_xpath(CREATE_BUTTON_BRANCH_TABLE)
@@ -76,10 +76,11 @@ class RepositoriesPage:
     def press_merge_button(self):
         Helper(self.context).click_on_element_by_xpath(MERGE_BUTTON)
 
+    def verify_merge_pull_request_dialog_visible(self):
+        Helper(self.context).is_element_visible_by_text_xpath(MERGE_PULL_REQUEST_DIALOG_TITLE)
+
     def press_merge_button_merge_dialog_window(self):
-        time.sleep(1)
         Helper(self.context).press_on_element_in_dialog_window(MERGE_BUTTON_MERGE_DIALOG_WINDOW)
-        time.sleep(2)
 
     def press_repository_settings_button(self):
         Helper(self.context).click_on_element_by_text(REPOSITORY_SETTINGS)
@@ -88,3 +89,7 @@ class RepositoriesPage:
         Helper(self.context).click_on_element_by_xpath(MANAGE_REPOSITORY_DROPDOWN_MENU)
         Helper(self.context).click_on_element_by_xpath(DELETE_REPOSITORY)
         Helper(self.context).click_on_element_by_xpath(DELETE_BUTTON)
+
+    def refresh_page(self):
+        Helper(self.context).refresh_page()
+

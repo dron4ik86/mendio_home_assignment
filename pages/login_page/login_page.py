@@ -21,5 +21,5 @@ class LoginPage:
 
     def is_login_page_visible(self):
         time.sleep(1)
-        Helper(self.context).is_element_visible_by_xpath(LOGIN_TITLE)
+        Helper(self.context).is_element_visible_by_text_xpath(LOGIN_TITLE)
 

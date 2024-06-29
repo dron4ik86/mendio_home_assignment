@@ -20,6 +20,5 @@ class LoginPage:
         Helper(self.context).send_keys_and_press_enter_by_id(PASSWORD_FIELD, os.getenv("PASSWORD"))
 
     def is_login_page_visible(self):
-        time.sleep(1)
-        Helper(self.context).is_element_visible_by_xpath(LOGIN_TITLE)
+        Helper(self.context).is_element_visible_by_text_xpath(LOGIN_TITLE)
 

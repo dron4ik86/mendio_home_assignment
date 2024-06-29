@@ -18,7 +18,7 @@ class ProjectsPage:
     def press_on_create_repository_button(self):
         Helper(self.context).click_on_element_by_xpath(CREATE_REPOSITORY_BUTTON)
 
-    def is_create_repository_form_visible(self):
+    def verify_repository_form_is_visible(self):
         Helper(self.context).is_element_visible_by_id(NEW_REPOSITORY_FORM)
 
     def enter_repository_name(self, repo_name):

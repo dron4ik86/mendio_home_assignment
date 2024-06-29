@@ -33,8 +33,10 @@ Scenario Outline: Create repository on BitBucket and verify that README.md file 
   And I press Create pull request button
   And I press Approve button
   And I press Merge button
+  And I verify that the Merge pull request dialog window is visible
   And I press Merge button in dialog window
   And I press on the Source button
+  And I refresh the page
   Then I need to verify that new file was created <file_name> on main branch
   When I press on the Repository settings button
   And I delete the repository that was created
